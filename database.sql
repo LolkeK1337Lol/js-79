@@ -1,23 +1,21 @@
--- создание базы данных
 CREATE DATABASE office_inventory;
 
 USE office_inventory;
 
--- таблица категорий
+
 CREATE TABLE categories (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     description TEXT
 );
 
--- таблица местоположений
+
 CREATE TABLE places (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     description TEXT
 );
 
--- таблица предметов
 CREATE TABLE items (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -30,7 +28,6 @@ CREATE TABLE items (
     FOREIGN KEY (place_id) REFERENCES places(id)
 );
 
--- демо данные
 
 INSERT INTO categories (id, name, description) VALUES
 (1, 'Мебель', 'Офисная мебель'),
