@@ -1,8 +1,9 @@
 const express = require('express');
-const app = express(); 
+const app = express();
 
 app.use(express.json());
 app.use("/uploads", express.static("uploads"));
+
 
 const categoriesRoutes = require("./routes/categories");
 const placesRoutes = require("./routes/places");
